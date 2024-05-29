@@ -4,7 +4,7 @@ from flask import Flask,request
 print(__name__)
 app = Flask(__name__)
 file_to_store = 'uploaded_file'
-#here our chunk size we have kept to 1mb
+#here our chunk size we have kept to 1mB , to explain that the client can send any size of chunk server will be able to read
 chunk_size = 1024*8
 @app.route("/upload", methods = ['POST'])
 def upload_chunk_file():
